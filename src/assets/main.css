@@ -1,0 +1,33 @@
+@import './base.css';
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+::-webkit-scrollbar {
+    width: 0.45rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #9092ff;
+    width: 0.4rem;
+    border-radius: 1rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: white;
+    border-radius: 0.01rem;
+    padding: 0 3px;
+  }
+  .invalid:before {
+    @apply content-[''] inline-block h-3.5 w-2 rotate-45 mb-1;
+    border-bottom: 3px solid #777;
+    border-right: 3px solid #777;
+  }
+  .valid:before {
+    border-bottom: 3px solid #77b13e;
+    border-right: 3px solid #77b13e;
+  }
